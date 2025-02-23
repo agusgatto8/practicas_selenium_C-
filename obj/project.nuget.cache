@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "fQUzoNG1lUQ=",
+  "dgSpecHash": "9oz4XF03yVk=",
   "success": true,
   "projectFilePath": "/Users/mac/Desktop/Nunit/SeleniumTests/SeleniumTests.csproj",
   "expectedPackageFiles": [
@@ -16,7 +16,7 @@
     "/Users/mac/.nuget/packages/nunit/3.14.0/nunit.3.14.0.nupkg.sha512",
     "/Users/mac/.nuget/packages/nunit.analyzers/3.9.0/nunit.analyzers.3.9.0.nupkg.sha512",
     "/Users/mac/.nuget/packages/nunit3testadapter/4.5.0/nunit3testadapter.4.5.0.nupkg.sha512",
-    "/Users/mac/.nuget/packages/selenium.support/4.29.0/selenium.support.4.29.0.nupkg.sha512",
+    "/Users/mac/.nuget/packages/selenium.support/4.0.0/selenium.support.4.0.0.nupkg.sha512",
     "/Users/mac/.nuget/packages/selenium.webdriver/4.29.0/selenium.webdriver.4.29.0.nupkg.sha512",
     "/Users/mac/.nuget/packages/selenium.webdriver.chromedriver/133.0.6943.12600/selenium.webdriver.chromedriver.133.0.6943.12600.nupkg.sha512",
     "/Users/mac/.nuget/packages/system.reflection.metadata/1.6.0/system.reflection.metadata.1.6.0.nupkg.sha512"

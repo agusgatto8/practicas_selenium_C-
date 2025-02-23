@@ -101,3 +101,4 @@
 /Users/mac/Desktop/Nunit/SeleniumTests/obj/Debug/net8.0/SeleniumTests.pdb
 /Users/mac/Desktop/Nunit/SeleniumTests/obj/Debug/net8.0/SeleniumTests.genruntimeconfig.cache
 /Users/mac/Desktop/Nunit/SeleniumTests/obj/Debug/net8.0/ref/SeleniumTests.dll
+/Users/mac/Desktop/Nunit/SeleniumTests/obj/Debug/net8.0/SeleniumTests.sourcelink.json
