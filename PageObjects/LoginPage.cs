@@ -15,7 +15,7 @@ namespace SeleniumTests.PageObjects
         protected By FormLogin = By.ClassName("modal-content");
         protected By InputUserName = By.Id("loginusername");
         protected By InputPassword = By.Id("loginpassword");
-        protected By ButtonSubmit = By.ClassName(".btn.btn-primary");
+        protected By ButtonSubmit = By.CssSelector("#logInModal > div > div > div.modal-footer > button.btn.btn-primary");
 
 
 
@@ -36,6 +36,14 @@ namespace SeleniumTests.PageObjects
         {  
             Driver.FindElement(LoginButton).Click();
             WaitHandler.ElementIsDisplayed(Driver, FormLogin);
+        }
+
+        public void FillFields(string user, string password) 
+        {  
+            Driver.FindElement(InputUserName).SendKeys(user);
+            Driver.FindElement(InputPassword).SendKeys(password);
+            WaitHandler.ElementIsClickeable(Driver, ButtonSubmit);
+            Driver.FindElement(ButtonSubmit).Click(); 
         }
             // Driver.FindElement(InputUserName).SendKeys(user);
             // Driver.FindElement(InputPassword).SendKeys(password);

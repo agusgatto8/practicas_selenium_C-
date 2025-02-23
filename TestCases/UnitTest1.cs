@@ -27,7 +27,8 @@ namespace SeleniumTests{
             loginPage.CheckElements();
             loginPage.SelectLogin();
             Thread.Sleep(3000);
-
+            loginPage.FillFields("agusgatto", "agus1994");
+            Thread.Sleep(3000);
         }
 
         [TearDown]

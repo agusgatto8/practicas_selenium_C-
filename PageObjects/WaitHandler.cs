@@ -25,7 +25,7 @@ namespace SeleniumTests.Handler
         {
             try
             {
-                WebDriverWait wait = new WebDriverWait(driver, TimeSpan.FromSeconds(10));
+                WebDriverWait wait = new WebDriverWait(driver, TimeSpan.FromSeconds(5));
                 wait.Until( d => d.FindElement(locator).Displayed && d.FindElement(locator).Enabled);
                 return true;
             }
