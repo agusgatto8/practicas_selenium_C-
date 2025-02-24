@@ -17,6 +17,8 @@ namespace SeleniumTests.PageObjects
         protected By InputPassword = By.Id("loginpassword");
         protected By ButtonSubmit = By.CssSelector("#logInModal > div > div > div.modal-footer > button.btn.btn-primary");
 
+        public string Username { get; private set; }
+        public string Password { get; private set; }
 
 
         public LoginPage(IWebDriver driver)
@@ -25,6 +27,21 @@ namespace SeleniumTests.PageObjects
 
             if (!Driver.Title.Equals("STORE"))
                 throw new Exception("This is not page");
+
+            Username = GenerateUsername();
+            Password = GeneratePassword();
+        }
+
+        private string GenerateUsername()
+        {
+            return "User" + new Random().Next(1000, 9999);
+        }
+
+        private string GeneratePassword()
+        {
+            const string chars = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789!@#$%^&*";
+            return new string(Enumerable.Repeat(chars, 10)
+                .Select(s => s[new Random().Next(s.Length)]).ToArray());
         }
 
         public bool CheckElements() 
@@ -38,17 +55,12 @@ namespace SeleniumTests.PageObjects
             WaitHandler.ElementIsDisplayed(Driver, FormLogin);
         }
 
-        public void FillFields(string user, string password) 
+        public void FillFields() 
         {  
-            Driver.FindElement(InputUserName).SendKeys(user);
-            Driver.FindElement(InputPassword).SendKeys(password);
+            Driver.FindElement(InputUserName).SendKeys(Username);
+            Driver.FindElement(InputPassword).SendKeys(Password);
             WaitHandler.ElementIsClickeable(Driver, ButtonSubmit);
             Driver.FindElement(ButtonSubmit).Click(); 
         }
-            // Driver.FindElement(InputUserName).SendKeys(user);
-            // Driver.FindElement(InputPassword).SendKeys(password);
-            // Driver.FindElement(ButtonSubmit).Click();
-
-        
     }
 }
