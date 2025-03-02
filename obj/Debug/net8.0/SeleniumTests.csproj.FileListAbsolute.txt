@@ -102,3 +102,10 @@
 /Users/mac/Desktop/Nunit/SeleniumTests/obj/Debug/net8.0/SeleniumTests.genruntimeconfig.cache
 /Users/mac/Desktop/Nunit/SeleniumTests/obj/Debug/net8.0/ref/SeleniumTests.dll
 /Users/mac/Desktop/Nunit/SeleniumTests/obj/Debug/net8.0/SeleniumTests.sourcelink.json
+/Users/mac/Desktop/Nunit/SeleniumTests/bin/Debug/net8.0/SeleniumTests.dll.config
+/Users/mac/Desktop/Nunit/SeleniumTests/bin/Debug/net8.0/System.Configuration.ConfigurationManager.dll
+/Users/mac/Desktop/Nunit/SeleniumTests/bin/Debug/net8.0/System.Diagnostics.EventLog.dll
+/Users/mac/Desktop/Nunit/SeleniumTests/bin/Debug/net8.0/System.Security.Cryptography.ProtectedData.dll
+/Users/mac/Desktop/Nunit/SeleniumTests/bin/Debug/net8.0/runtimes/win/lib/net8.0/System.Diagnostics.EventLog.Messages.dll
+/Users/mac/Desktop/Nunit/SeleniumTests/bin/Debug/net8.0/runtimes/win/lib/net8.0/System.Diagnostics.EventLog.dll
+/Users/mac/Desktop/Nunit/SeleniumTests/bin/Debug/net8.0/App.config

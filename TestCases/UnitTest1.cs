@@ -2,45 +2,35 @@ using NUnit.Framework;
 using OpenQA.Selenium;
 using OpenQA.Selenium.Chrome;
 using SeleniumTests.PageObjects;
-using OpenQA.Selenium.Support.UI;
 
-namespace SeleniumTests{
+namespace SeleniumTests.TestCases{
 
+    
     [TestFixture]
-    public class LoginTests
-    {
-        protected IWebDriver Driver;
+    public class LoginTests : BaseTest
+    {        
+        private string Username;
+        private string Password;
 
-        [SetUp]
-        public void BeforeTest() 
+        [Test, Order(1)]
+        public void CreatedUser() 
         {
-            Driver = new ChromeDriver();
-            Driver.Manage().Window.Maximize(); 
-            Driver.Navigate().GoToUrl("https://www.demoblaze.com/index.html");
-            Thread.Sleep(2000);
+            SignUpPage signUpPage = new SignUpPage(Driver);
+            Username = signUpPage.GenerateUsername();
+            Password = signUpPage.GeneratePassword();
+            signUpPage.CheckElements();
+            signUpPage.SignUpStart(Username, Password);
         }
 
-        [Test]
+        [Test, Order(2)]
         public void LoginSuccessfull() 
         {
             LoginPage loginPage = new LoginPage(Driver);
             loginPage.CheckElements();
             loginPage.SelectLogin();
             Thread.Sleep(3000);
-            loginPage.FillFields();
+            loginPage.FillFields(Username, Password);
             Thread.Sleep(3000);
         }
-
-        [TearDown]
-        public void AfterTest() 
-        {
-             if (Driver != null)
-            {
-                Driver.Quit();
-                Driver.Dispose(); 
-                Driver = null;
-            }
-        }
-
     }
 }

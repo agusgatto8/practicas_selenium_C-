@@ -19,8 +19,6 @@ namespace SeleniumTests.Handler
             return false;
         }
 
-
-
         public static bool ElementIsClickeable(IWebDriver driver, By locator) 
         {
             try
@@ -33,7 +31,12 @@ namespace SeleniumTests.Handler
             {
                 return false;
             }
+        }
 
+        public static void AcceptAlert(IWebDriver driver)
+        {
+           WebDriverWait wait = new WebDriverWait(driver, TimeSpan.FromSeconds(10));
+            wait.Until(drv => drv.SwitchTo().Alert()).Accept();
         }
     }
 }
