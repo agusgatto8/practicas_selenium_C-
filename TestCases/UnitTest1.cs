@@ -5,13 +5,16 @@ using SeleniumTests.PageObjects;
 
 namespace SeleniumTests.TestCases{
 
-    
+    //INDICAMOS QUE TENEMOS UNA CLASE CON TEST A EJECUTAR
     [TestFixture]
+
+    // SE DEFINE LA CLASE CON LAS PRUEBAS LA CUAL HEREDA LA CLASE BASETEST QUE CONTIENE LA CONFIGURACION DEL NAVEGADOR
     public class LoginTests : BaseTest
     {        
         private string Username;
         private string Password;
 
+    // CON LA SIGUEINTE ANOTACION PODEMOS ORDENARLE AL NAVEGADOR QUE EJECUTE LAS PRUEBAS EN ORDEN SIN CERRAR EL MISMO.
         [Test, Order(1)]
         public void CreatedUser() 
         {

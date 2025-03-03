@@ -9,7 +9,7 @@ namespace SeleniumTests.PageObjects
     public class SignUpPage : BasePage
     {
 
-       // Selectores y variables que se vayan a utilizar
+    // Selectores y variables que se vayan a utilizar
 
        protected By SignUpButton = By.Id("signin2");
        protected By SignUpForm = By.ClassName("modal-content");
@@ -32,20 +32,7 @@ namespace SeleniumTests.PageObjects
                 throw new Exception("This is not page");
        } 
 
-       // Generador de usuario y contrasena ranmdom
-
-       public string GenerateUsername()
-        {
-            return "User" + new Random().Next(1000, 9999);
-        }
-
-        public string GeneratePassword()
-        {
-            const string chars = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789!@#$%^&*";
-            return new string(Enumerable.Repeat(chars, 10)
-                .Select(s => s[new Random().Next(s.Length)]).ToArray());
-        }
-
+     
         //Metodos 
 
          public bool CheckElements() 
@@ -54,7 +41,7 @@ namespace SeleniumTests.PageObjects
         }
 
         public void SignUpStart(string Username, string Password) 
-        {  
+        {
             Driver.FindElement(SignUpButton).Click();
             WaitHandler.ElementIsDisplayed(Driver, SignUpForm);
             WaitHandler.ElementIsClickeable(Driver, SignUpSubmit);

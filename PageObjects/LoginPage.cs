@@ -19,7 +19,6 @@ namespace SeleniumTests.PageObjects
         public LoginPage(IWebDriver driver)
         {
             Driver = driver;
-
         }
 
         public bool CheckElements() 

@@ -8,13 +8,14 @@ using System.Configuration;
 
 namespace SeleniumTests.TestCases 
 {
-    public abstract class BaseTest()
+    public class BaseTest()
     {
         protected IWebDriver Driver;
 
-        // protected string Url = ConfigurationManager.AppSettings["Url"];
+    // protected string Url = ConfigurationManager.AppSettings["Url"];
 
 
+    // CON LA SIGUEINTE ANOTACION INDICAMOS QUE EL NAVEGADOR SE INICIALIZA UNA SOLA VEZ PARA EJECUTAR LAS PRUEBAS.
         [OneTimeSetUp]
         public void BeforeBaseTest() 
         {   
@@ -22,7 +23,7 @@ namespace SeleniumTests.TestCases
             Driver.Navigate().GoToUrl("https://www.demoblaze.com/index.html");
             Driver.Manage().Window.Maximize();
         }
-
+    // INDICAMOS QUE UNA VEZ CORRIDAS LAS PRUEBAS EL NAVEGADOR SE CERRARA.
         [OneTimeTearDown]
         public void AfterBaseTest() 
         {
